@@ -40,7 +40,6 @@ personal-portfolio-website
 * TypeScript
 * Tailwind CSS
 * React
-* Framer Motion
 
 ### Features
 
