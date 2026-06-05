@@ -32,7 +32,7 @@ personal-portfolio-website
 
 ---
 
-## Task 2 - Responsive AI Landing Page
+## Task 2 - Responsive Landing Page
 
 ### Technologies Used
 
