@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster Pro | Premium Task Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <div class="brand">
+                    <span class="logo-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <h1>UpFlow<span>Tasks</span></h1>
+                </div>
+                <div class="header-actions">
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+                    <div class="date-display" id="currentDate">Monday, June 8</div>
+                </div>
+            </div>
+            
+            <div class="stats-overview">
+                <div class="stat-card">
+                    <span class="stat-value" id="totalTasks">0</span>
+                    <span class="stat-label">Total Tasks</span>
+                </div>
+                <div class="stat-card primary">
+                    <span class="stat-value" id="remainingTasks">0</span>
+                    <span class="stat-label">Remaining</span>
+                </div>
+                <div class="stat-card success">
+                    <span class="stat-value" id="completedTasks">0</span>
+                    <span class="stat-label">Completed</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="task-input-section">
+            <form id="todoForm" class="input-wrapper">
+                <div class="input-group">
+                    <input type="text" id="todoInput" placeholder="What's your next priority?" autocomplete="off" maxlength="100">
+                    <select id="priorityInput" class="priority-select" aria-label="Task Priority">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-add" aria-label="Add Task">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+        </section>
+
+        <nav class="filter-nav">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+            <div class="filter-indicator"></div>
+        </nav>
+
+        <section class="task-list-section">
+            <ul id="todoList" class="todo-list">
+                <!-- Tasks will be injected here -->
+            </ul>
+            
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 4"/>
+                        <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+                    </svg>
+                </div>
+                <h3>Your list is clear</h3>
+                <p>Enjoy your free time or add a new task to get started.</p>
+            </div>
+        </section>
+        
+        <footer class="app-footer">
+            <button id="clearCompleted" class="btn-text">Clear Completed</button>
+        </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
