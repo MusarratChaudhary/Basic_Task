@@ -60,4 +60,32 @@ responsive-landing-page
 
 ---
 
+## Task 3 - Premium To-Do Application
+
+### Technologies Used
+
+* HTML5
+* CSS3 (Custom Properties, Flexbox, Grid)
+* JavaScript (ES6+, LocalStorage, DOM API)
+* Responsive Design
+
+### Features
+
+* SaaS-Grade UI/UX Design
+* Light & Dark Mode Support
+* Task Priority System (Low, Medium, High)
+* Dynamic Filtering (All, Active, Completed)
+* Local Storage Persistence
+* Fluid Responsive Design (Mobile, Tablet, Desktop)
+* Premium Animations & Micro-interactions
+* XSS Protected Rendering
+
+### Project Folder
+
+```bash
+premium-todo
+```
+
+---
+
 More tasks will be added in separate folders as they are completed.
