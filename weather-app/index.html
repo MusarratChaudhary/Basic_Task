@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast - Professional Weather App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- Dynamic Weather Background -->
+    <div class="weather-overlay"></div>
+
+    <!-- Floating Blur Effects -->
+    <div class="background-blur blur-1"></div>
+    <div class="background-blur blur-2"></div>
+    <div class="background-blur blur-3"></div>
+
+    <main class="app">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                Sky<span>Cast☁️</span>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="tagline">Know the sky before it changes</div>
+            <p class="subtitle">
+                Real-time weather forecasts and insights for every city.
+            </p>
+
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="city-input" 
+                    placeholder="Search city..." 
+                    autocomplete="off"
+                >
+                <button id="search-btn">🔍 Search Weather</button>
+            </div>
+        </section>
+
+        <!-- Loading -->
+        <div id="loading" class="loading hidden">
+            Loading weather data...
+        </div>
+
+        <!-- Error -->
+        <div id="error" class="error hidden"></div>
+
+        <!-- Main Weather -->
+        <section id="weather-container" class="weather-container hidden">
+            <div class="weather-main">
+                <div class="weather-icon" id="weather-icon">☀️</div>
+                <div class="location" id="location"></div>
+                <div class="date-time" id="date-time"></div>
+                <div class="temperature" id="temperature"></div>
+                <div class="condition" id="condition"></div>
+            </div>
+
+            <!-- Weather Details -->
+            <div class="weather-details glass-card">
+                <h3>Weather Details🌦️</h3>
+                <div class="detail">
+                    <span>Feels Like</span>
+                    <span id="feels-like"></span>
+                </div>
+                <div class="detail">
+                    <span>Humidity</span>
+                    <span id="humidity"></span>
+                </div>
+                <div class="detail">
+                    <span>Wind</span>
+                    <span id="wind"></span>
+                </div>
+                <div class="detail">
+                    <span>Pressure</span>
+                    <span id="pressure"></span>
+                </div>
+                <div class="detail">
+                    <span>High / Low</span>
+                    <span id="high-low"></span>
+                </div>
+                <div class="detail">
+                    <span>Sunrise</span>
+                    <span id="sunrise"></span>
+                </div>
+                <div class="detail">
+                    <span>Sunset</span>
+                    <span id="sunset"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forecast -->
+        <section id="forecast-section" class="forecast-section hidden">
+            <h2>5 Day Forecast</h2>
+            <div id="forecast-container" class="forecast-container"></div>
+        </section>
+
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
+
+
+
