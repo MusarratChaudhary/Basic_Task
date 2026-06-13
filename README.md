@@ -115,4 +115,32 @@ calculator-app
 
 ---
 
+## Task 5 - SkyCast (Professional Weather App)
+
+### Technologies Used
+
+* HTML5
+* CSS3 (Custom Properties, Glassmorphism, Animations)
+* JavaScript (ES6+, Fetch API, Async/Await)
+* OpenWeatherMap API
+* Responsive Design
+
+### Features
+
+* **Real-time Weather Data:** Get current temperature, conditions, and detailed metrics.
+* **5-Day Forecast:** Daily weather outlook with noon-time projections.
+* **Detailed Weather Insights:** Humidity, Wind Speed, Pressure, Feels Like, High/Low, Sunrise, and Sunset.
+* **Dynamic Backgrounds:** Background gradients and overlays change based on the current weather condition (Clear, Clouds, Rain, etc.).
+* **Search Functionality:** Search weather for any city globally.
+* **Responsive Design:** Fully optimized for mobile, tablet, and desktop viewing.
+* **Interactive UI:** Smooth animations, floating blur effects, and glassmorphism design.
+
+### Project Folder
+
+```bash
+weather-app
+```
+
+---
+
 More tasks will be added in separate folders as they are completed.
